@@ -1,50 +1,107 @@
-# Welcome to your Expo app 👋
+# Receipt Scanner App 🧾
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## Overview
+A small Expo + React Native side project built to learn mobile UI, theming, and native plugin integration. The app demonstrates a simple "points from receipts" concept with a mock scan history, a native document scanner integration, theming, and a few reusable UI components.
 
-## Get started
+---
+
+## Quick demo / Screenshots
+
+Add your screenshots to `assets/images/` and replace the placeholders below.
+
+![Home screen placeholder](./assets/images/screenshot-home.png)
+*Home: scan history and header showing total points.*
+
+![Scanner placeholder](./assets/images/screenshot-scanner.png)
+*Scanner flow placeholder — opens native scanner plugin.*
+
+![Item detail / history placeholder](./assets/images/screenshot-item.png)
+*Scan history item row and floating actions.*
+
+---
+
+## Features
+
+- Expo + React Native (TypeScript)
+- Theme support (light/dark) with persisted preference
+- Native document scanner integration using `react-native-document-scanner-plugin`
+- Mock scan history (FlatList) with a floating "scan" button and a scroll-to-top action
+- Small, focused components and style factories for theme-aware styling
+
+---
+
+## What I implemented — learning narrative
+
+This project was intentionally small and focused so I could learn practical aspects of mobile development:
+
+- Theming & persistence
+  - Implemented a ThemeProvider and hook to expose colors and toggle state. Persisted the preference to storage to learn about async initialization, side effects, and context usage.
+- Native plugin integration
+  - Integrated `react-native-document-scanner-plugin` and implemented Android camera permission flow (PermissionsAndroid). This taught me platform differences and how to handle native module responses and errors.
+- Component-driven design
+  - Built reusable components (Header, ScanHistoryItem, AddScanItemButton, ScrollToTopButton) and style factories (home/styles) so UI is consistent and theme-aware.
+- UX & small interactions
+  - Implemented FlatList performance considerations, refs for scroll control, and conditional floating actions to practice real UX patterns.
+
+---
+
+## Key files
+
+- app/index.tsx — Main screen and scanner integration
+- app/_layout.tsx — App wrapper (theme provider / router)
+- hooks/useTheme.tsx — Theme context, provider, hook, persistence
+- components/* — UI components: Header, AddScanItemButton, ScanHistoryItem, ScrollToTopButton
+- assets/styles/* — Style factory functions for screens
+
+---
+
+## Run locally
 
 1. Install dependencies
-
-   ```bash
    npm install
-   ```
 
-2. Start the app
-
-   ```bash
+2. Start Expo
    npx expo start
-   ```
 
-In the output, you'll find options to open the app in a
+3. Run on device/emulator
+   npm run android
+   npm run ios
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+(Requires Expo CLI and a configured environment for Android/iOS.)
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+---
 
-## Get a fresh project
+## App Store / Play Store copy suggestions
 
-When you're ready, run:
+Short (for store listing header)
+- "Scan receipts. Earn points. Track history."
 
-```bash
-npm run reset-project
-```
+Promotional / one-line
+- "Quickly scan receipts and track reward points — simple, local, and theme-aware."
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Long description (for App Store / Play Store)
+- "Receipt Points is a lightweight receipt-scanning demo app built with Expo and React Native. Scan receipts using a native document scanner, view a searchable history, and track points assigned to each receipt. This app demonstrates a learn-by-building approach: theming with persisted preferences, native plugin integration, permissions handling, and small, reusable UI components. Ideal as a reference or starting point for receipt/expense features."
 
-## Learn more
+Suggested keywords / tags
+- receipts, scanner, rewards, points, expense, scan, mobile, React Native, Expo
 
-To learn more about developing your project with Expo, look at the following resources:
+Suggested screenshot captions
+- "Scan receipts using the device camera"
+- "View your scanned receipt history"
+- "Tap to add a new scan — points assigned instantly"
+- "Light and Dark themes supported"
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+---
 
-## Join the community
+## Next steps / TODO
 
-Join our community of developers creating universal apps.
+- Persist scan history (AsyncStorage / backend)
+- Add OCR / receipt parsing and real points logic
+- Improve error flows and permission UX
+- Add unit and integration tests
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+---
+
+## License
+
+This project is a personal learning project. Use the code as a reference.
