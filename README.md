@@ -30,7 +30,7 @@ Add your screenshots to `assets/images/` and replace the placeholders below.
 
 ---
 
-## What I implemented — learning narrative
+## What I implemented
 
 This project was intentionally small and focused so I could learn practical aspects of mobile development:
 
