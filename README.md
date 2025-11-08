@@ -9,7 +9,7 @@ A small Expo + React Native side project built to learn mobile UI, theming, and 
 
 <!-- ![Home screen placeholder](./assets/images/screenshot-home.png) -->
 
-<img src="./assets/images/screenshot-home.png" alt="Home screen placeholder" width="480" style="max-width:100%; height:auto;" />
+<img src="./assets/images/screenshot-home.png" alt="Home screen placeholder" width="240" style="max-width:100%; height:auto;" />
 *Home: scan history and header showing total points.*
 
 *Home: scan history and header showing total points.*
