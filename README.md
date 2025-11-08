@@ -7,8 +7,6 @@ A small Expo + React Native side project built to learn mobile UI, theming, and 
 
 ## Quick demo / Screenshots
 
-Add your screenshots to `assets/images/` and replace the placeholders below.
-
 ![Home screen placeholder](./assets/images/screenshot-home.png)
 *Home: scan history and header showing total points.*
 
